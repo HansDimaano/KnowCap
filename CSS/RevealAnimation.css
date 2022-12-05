@@ -1,0 +1,50 @@
+/*
+    CSS FOR REVEAL ANIMATIONS
+    (Partnered with Reveal Animations Script)
+*/
+
+
+/* UNREVEALED CONTENTS */
+
+/* 
+    
+    - These contents are not on their original position yet
+    - Opacity is set to 0
+    - All are transitioned by 1 second ease
+*/
+
+.reveal.right { /* Animation is from right to original position */
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.left { /* Animation is from left to original position */
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.down { /* Animation is from down to original position */
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.up { /* Animation is from up to original position */
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+/* REVEALED CONTENT ALREADY */
+
+/*
+    - The content is in original position
+    - Opacity is set to 1
+*/
+
+.reveal.active { /* Means the content is revealed (active) */
+    transform: translateY(0);
+    opacity: 1;
+}
