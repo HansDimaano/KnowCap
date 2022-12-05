@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Use meta to modify the charset, name, and content -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Link main CSS to index page -->
+	<link rel="stylesheet" href="CSS/index.css">
+
+    <!-- Link Reveal Animation CSS to index page -->
+	<link rel="stylesheet" href="CSS/RevealAnimation.css">
+
+    <!-- Link Web Page Icon of KnowCap-->
+    <link rel="icon" type="image/png" href="Assets/KnowCapIcon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="Assets/KnowCapIcon-16x16.png" sizes="16x16" />
+
+	<!-- Title the page to Knowcap - Home -->
+	<title>KnowCap - Home</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- About Us Link -->
+        <a class="about_us" href="Pages/AboutUs.html">About Us</a>
+
+        <!-- KnowCap Logo -->
+        <img src="Assets/KnowCap_logo.png">
+
+        <!-- FAQs Link -->
+        <a class="faqs">FAQs</a>
+    </header>
+
+
+    <!-- Capture Moments DIV -->
+    <div class="capture_moments">
+
+        <!-- Left Image Decoration -->
+        <img src="Assets/left_decor1.png" class="left">
+
+        <!-- Capture Text DIV -->
+        <div class="capture_text">
+
+            <!-- Capture Moments Heading -->
+            <h1>Capture moments</h1>
+
+            <!-- Start Capture Link -->
+            <a>Start <b>CAPTURE</b></a>
+        </div>
+
+        <!-- Right Image Decoration -->
+        <img src="Assets/right_decor1.png" class="right">
+    </div>
+
+
+    <!-- Why Capture DIV -->
+    <div class="why_capture">
+
+        <!-- Why Capture Text DIV -->
+        <div class="why_capture_text">
+
+            <!-- Why Do We Capture Subheading (with Reveal Animation) -->
+            <h3 class="reveal left">Why do we <b>capture moments?</b></h3>
+
+            <!-- Why Capture Paragraph (with Reveal Animation) -->
+            <p class="reveal left">
+                It's so easy to forget small details!
+                <br><br>
+                The most significant events in your life may be easy for you to recall, whether they were happy or unhappy, 
+                but what about the little things? These moments are fleeting and easily forgotten; it may take a year or longer 
+                to forget them, but without a timeless, visual recall, you risk losing the emotion and never recovering it.
+                <br><br>
+                Pictures and videos can evoke the feelings, memories, and smells associated with it. You might be astonished by what you can 
+                recall simply from a single unposed picture or video!
+            </p>
+        </div>
+
+        <!-- Why Capture Image Decoration DIV -->
+        <img src="Assets/right_decor2.gif">
+    </div>
+
+
+    <!-- Transition DIV -->
+    <div class="transition">
+
+        <!-- Camera Transition Image (with Reveal Animation) -->
+        <img src="Assets/camera.png" class="reveal up">
+    </div>
+
+
+    <!-- Why KnowCap DIV -->
+    <div class="why_knowcap">
+
+        <!-- Why KnowCap Subheading -->
+        <h3>Why <b>KnowCap?</b></h3>
+
+        <!-- Core Values DIV -->
+        <div class="core_values">
+
+            <!-- Core Value 1 DIV (with Reveal Animation) -->
+            <div class="core_value1 reveal up">
+
+                <!-- Core Value 1 Image -->
+                <img src="Assets/corevalue_1.png">
+
+                <!-- Core Value 1 Subheading -->
+                <h4>Complimentary</h4>
+
+                <!-- Core Value 1 Description -->
+                <p>All our capturing tools are free to use for students, video game streamers, freelancers, and basically everyone!</p>
+            </div>
+
+            <!-- Core Value 2 DIV (with Reveal Animation) -->
+            <div class="core_value2 reveal up">
+
+                <!-- Core Value 2 Image -->
+                <img src="Assets/corevalue_2.png">
+
+                <!-- Core Value 2 Subheading -->
+                <h4>Simplicity</h4>
+
+                <!-- Core Value 2 Subheading -->
+                <p>Our capturing tools are made to be easy to use and prevent any hassles. Made for all professions and all ages!</p>
+            </div>
+
+            <!-- Core Value 3 DIV (with Reveal Animation) -->
+            <div class="core_value3 reveal up">
+
+                <!-- Core Value 3 Image -->
+                <img src="Assets/corevalue_3.png">
+
+                <!-- Core Value 3 Subheading -->
+                <h4>Efficiency</h4>
+
+                <!-- Core Value 3 Subheading -->
+                <p>Efficiency is our top goal for this website. We promise to provide one of the most efficient capturing tools.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Footer Transition Image -->
+        <img src="Assets/footer_transition.png">
+
+        <!-- Footer Content DIV -->
+        <div class="footer_content">
+
+            <!-- KnowCap Description DIV -->
+            <div class="knowcap_desc">
+
+                <!-- KnowCap Logo -->
+                <img src="Assets/KnowCap_logo.png" class="footer_transition">
+
+                <!-- KnowCap Description -->
+                <p>
+                    Capture. Save. Cherish the moments with your files saved in KnowCap.
+                    <br>
+                    Record now using our very efficient and easy-to-use Media Capture APIs!
+                </p>
+            </div>
+
+            <!-- KnowCap Image Decoration (with Reveal Animation) -->
+            <img src="Assets/footer_decor.png" class="footer_decor reveal left">
+        </div>
+    </footer>
+
+
+    <!-- Link the Reveal Animation JavaScript to index page -->
+    <script src="JavaScript/RevealAnimation.js"></script>
+
+    <!--
+
+        TECHNICAL DESCRIPTION OF REVEAL ANIMATION:
+
+        - The reveal animation works through the Reveal Animation CSS and JavaScript.
+        - I highly recommend you to open those two files to know how it works.
+
+        - I assign which elements will have reveal animation by assigning "reveal ___" in its class names.
+        - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
+        - You can search "with Reveal Animation" to show which elements has Reveal Animation.
+
+    -->
+
+</body>
+</html>
