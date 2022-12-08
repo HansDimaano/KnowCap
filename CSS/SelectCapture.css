@@ -1,0 +1,302 @@
+/*
+  SUMMARY OF TECHNIQUES DONE:
+
+  - Used @import to import fonts appropriate for the design
+  - Used display: flex for most of the divs
+  - Used transiion and hover for element animations when hovering
+  - Used @mediascreen for handling the web page responsiveness
+
+*/
+
+/* Import Raleway Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Import B612 Font */
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Body CSS */
+body {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif; /* Raleway Font */
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+/* Header CSS */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+
+/* KnowCap Logo CSS */
+header img {
+  max-width: 300px;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in-out;
+  padding: 20px 0 10px 0;
+}
+
+/* KnowCap Logo Hover CSS */
+header img:hover {
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed #C344FF;
+}
+
+/* KnowCap Logo Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  header img {
+    max-width: 250px;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 900px) {
+  header img {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 750px) {
+  header img {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  header img {
+    max-width: 120px;
+  }
+}
+/*---------------------------------------------------------------*/
+
+
+
+/* Links (hover, focus, and active links) CSS */
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* About Us and FAQs Links CSS */
+header a.about_us, header a.faqs {
+  min-width: 100px;
+  padding: 10px;
+  border: 2px solid black;
+  border-top: 2px dashed;
+  transition: 0.2s linear;
+  cursor: pointer;
+  border-bottom: 2px dashed transparent;
+}
+
+/* About Us and FAQs Links Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  header a.about_us, header a.faqs {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 900px) {
+  header a.about_us, header a.faqs {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  header a.about_us, header a.faqs {
+    font-size: 12px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 550px) {
+  header a.about_us, header a.faqs {
+    font-size: 11px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  header a.about_us, header a.faqs {
+    font-size: 9px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+/* About Us Link CSS */
+header a.about_us {
+  border-top-color: #56CCFF;
+}
+
+/* About Us Link Hover CSS */
+header a.about_us:hover {
+  border-bottom: 2px dashed #56CCFF;
+  color: #56CCFF;
+  font-weight: bolder;
+}
+
+/* FAQs Link CSS */
+header a.faqs {
+  border-top-color: #C344FF;
+}
+
+/* FAQs Link Hover CSS */
+header a.faqs:hover {
+  border-bottom: 2px dashed #C344FF;
+  color: #C344FF;
+  font-weight: bolder;
+}
+
+/* Top Right Decoration CSS */
+.topright_decor {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10%;
+}
+
+/* Bottom Left Decoration CSS */
+.bottomleft_decor {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 10%;
+}
+
+/* Select Capture DIV CSS */
+.select_capture {
+  background: url("../Assets/galaxy_bg2.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 150px 0;
+}
+
+/* Select Capture Link CSS */
+.select_capture a {
+  width: 30%;
+  min-width: 400px;
+  min-height: 400px;
+  cursor: pointer;
+}
+
+/* Select Capture Link Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .select_capture a {
+    min-width: 300px;
+    min-height: 300px;
+  }
+}
+/*------------------------------------------------------------------------*/
+
+
+
+/* Capture Buttons CSS */
+.cap_button {
+  background-color: black;
+  border: 6px dashed white;
+  border-radius: 30px;
+  min-height: 300px;
+  padding: 50px 0 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: left;
+  margin: 52px 30px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Capture Button Heading CSS */
+.cap_button h3 {
+  font-size: 28px;
+  margin-right: 60px;
+}
+
+/* Capture Button Icon CSS */
+.cap_button img {
+  width: 50%;
+  -webkit-animation: entranceLeft 0.2s ease;
+          animation: entranceLeft 0.2s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* Capture Button Heading and Icon Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .cap_button h3 {
+    font-size: 18px;
+  }
+  .cap_button img {
+    width: 40%;
+  }
+}
+/*------------------------------------------------------------------------------------*/
+
+
+
+/* Capture Button Hover CSS */
+.cap_button:hover {
+  margin: 50px 30px;
+  justify-content: center;
+}
+
+/* Capture Button Icon Hover CSS */
+.cap_button:hover img {
+  -webkit-animation: entranceLeft 0.5s ease;
+          animation: entranceLeft 0.5s ease; /* Assign the entranceLeft Animation to the Decoration */
+}
+
+/* Capture Button Heading Hover CSS */
+.cap_button:hover h3 {
+  width: 100%;
+}
+
+/* Video Capture Button Hover CSS */
+.cap_button.vid:hover {
+  border: 8px dashed #84bdff;
+  color: #84bdff;
+}
+
+/* Audio Capture Button Hover CSS */
+.cap_button.aud:hover {
+  border: 8px dashed #ce84ff;
+  color: #ce84ff;
+}
+
+/* Screen Capture Button Hover CSS */
+.cap_button.scr:hover {
+  border: 8px dashed #c85d94;
+  color: #c85d94;
+}
+
+/* Entrance Left Initial Animation (will only play once when the page is fully loaded) */
+@-webkit-keyframes entranceLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes entranceLeft {
+  from {
+      transform: translateX(-20px);
+      opacity: 0;
+  }
+
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}

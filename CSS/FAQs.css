@@ -1,0 +1,518 @@
+/*
+  SUMMARY OF TECHNIQUES DONE:
+
+  - Used @import to import fonts appropriate for the design
+  - Used display: flex for most of the divs
+  - Used transiion and hover for element animations when hovering
+  - Used @mediascreen for handling the web page responsiveness
+
+*/
+
+/* Import Raleway Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Import B612 Font */
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Body CSS */
+body {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif; /* Raleway Font */
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Header CSS */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+
+/* KnowCap Logo CSS */
+header img {
+  max-width: 300px;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in-out;
+  padding: 20px 0 10px 0;
+  margin-right: 200px;
+}
+
+/* KnowCap Logo Hover CSS */
+header img:hover {
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed #C344FF;
+}
+
+/* KnowCap Logo Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  header img {
+    max-width: 250px;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 900px) {
+  header img {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 750px) {
+  header img {
+    max-width: 150px;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  header img {
+    max-width: 120px;
+    margin-right: 0;
+  }
+}
+/*---------------------------------------------------------------*/
+
+
+
+/* Links (hover, focus, and active links) CSS */
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* About Us and FAQs Links CSS */
+header a.about_us, header a.faqs {
+  min-width: 100px;
+  padding: 10px;
+  border: 2px solid black;
+  border-top: 2px dashed;
+  transition: 0.2s linear;
+  cursor: pointer;
+  border-bottom: 2px dashed transparent;
+}
+
+/* About Us and FAQs Links Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  header a.about_us, header a.faqs {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 900px) {
+  header a.about_us, header a.faqs {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  header a.about_us, header a.faqs {
+    font-size: 12px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 550px) {
+  header a.about_us, header a.faqs {
+    font-size: 11px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  header a.about_us, header a.faqs {
+    font-size: 9px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+/* About Us Link CSS */
+header a.about_us {
+  border-top-color: #56CCFF;
+}
+
+/* About Us Link Hover CSS */
+header a.about_us:hover {
+  border-bottom: 2px dashed #56CCFF;
+  color: #56CCFF;
+  font-weight: bolder;
+}
+
+/* FAQs Link CSS */
+header a.faqs {
+  border-top-color: #C344FF;
+  border-bottom: 2px dashed #C344FF;
+  color: #C344FF;
+  font-weight: bolder;
+}
+
+/* About KnowCap DIV CSS */
+.faqs_heading {
+  background: url("../Assets/galaxy_bg1.png") no-repeat center center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 0;
+}
+
+/* About KnowCap DIV Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  .faqs_heading {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+/*----------------------------------------------------------------------*/
+
+
+
+/* About KnowCap Image Decoration CSS */
+.faqs_heading img {
+  max-width: 35%;
+  -webkit-animation: revealLeft 1s ease;
+  animation: revealLeft 1s ease; /* Assign the revealLeft Animation to the Decoration */
+}
+
+/* Reveal Right Initial Animation (will only play once when the page is fully loaded) */
+@-webkit-keyframes revealLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes revealLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* About KnowCap Image Decoration Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  .faqs_heading img {
+    max-width: 70%;
+  }
+}
+/*-----------------------------------------------------------------------------------*/
+
+
+
+/* Information Text DIV (both About KnowCap and Our Story Text DIV) CSS */
+.info_text {
+  margin: 0 110px;
+  text-align: right;
+}
+
+/* Information Text DIV Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 551px) and (max-width: 700px) {
+  .info_text {
+    margin-left: 200px;
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .info_text {
+    margin-left: 100px;
+    margin-right: 50px;
+  }
+}
+/*-------------------------------------------------------------------------*/
+
+
+
+/* General Heading CSS */
+h1 {
+  font-size: 54px;
+}
+
+/* General Heading Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 751px) and (max-width: 1000px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+/*--------------------------------------------------------------------*/
+
+
+
+/* General Paragraph CSS */
+p {
+  font-family: "B612", sans-serif;
+  font-size: 17px;
+}
+
+/* General Paragraph Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  p {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1000px) {
+  p {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  p {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  p {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  p {
+    font-size: 10px;
+  }
+}
+/*----------------------------------------------------------------------*/
+
+
+
+/* FAQs Questions DIV CSS */
+.faqs_questions {
+  background: url("../Assets/circle_bg.png") center center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+/* Question DIV CSS */
+.question {
+  background-color: black;
+  border: 6px dashed white;
+  border-radius: 30px;
+  padding: 30px 50px;
+  width: 17%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 3%;
+  transition: 0.2s ease-in-out;
+}
+
+/* Question DIV Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 801px) and (max-width: 1100px) {
+  .question {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 800px) {
+  .question {
+    width: 15%;
+    padding: 10px 30px;
+    border: 3px dashed white;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .question {
+    width: 50%;
+    padding: 10px 30px;
+    border: 3px dashed white;
+  }
+}
+/*-----------------------------------------------------------------*/
+
+
+
+/* Question Text CSS */
+.question h3 {
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+/* Question Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .question h3 {
+    font-size: 20px;
+  }
+}
+/*-----------------------------------------------------------------*/
+
+
+
+/* Question "Q" Text CSS */
+.question h3 b {
+  color: #56CCFF;
+}
+
+/* Answer Text CSS */
+.question p {
+  display: none;
+  font-size: 28px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+/* Answer Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .question p {
+    font-size: 20px;
+  }
+}
+/*-----------------------------------------------------------------*/
+
+
+
+/* Question DIV Hover CSS */
+.question:hover {
+  border-color: #56CCFF;
+}
+
+/* Question Text Hover CSS */
+.question:hover h3 {
+  display: none;
+}
+
+/* Answer Text Hover CSS */
+.question:hover p {
+  display: block;
+}
+
+/* Footer CSS */
+footer {
+  background: url("../Assets/footer_bg.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Transition Image CSS */
+.footer_transition {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer Content DIV CSS */
+.footer_content {
+  display: flex;
+}
+
+/* KnowCap Description DIV CSS */
+.knowcap_desc {
+  width: 50%;
+  margin: 50px 0;
+  padding: 80px 40px 50px 80px;
+  text-align: left;
+}
+
+/* KnowCap Description DIV Responsive CSS (through the help of media screen) ----- */
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  .knowcap_desc {
+    margin: 20px 0;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .knowcap_desc {
+    margin: 10px 0;
+    padding: 60px 10px 30px 60px;
+  }
+}
+/*----------------------------------------------------------------------------------*/
+/* KnowCap Logo in Footer CSS */
+.knowcap_desc img {
+  width: 40%;
+}
+
+/* KnowCap Logo in Footer Responsive CSS (through the help of media screen) ----- */
+@media screen and (min-width: 451px) and (max-width: 1200px) {
+  .knowcap_desc img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .knowcap_desc img {
+    width: 60%;
+  }
+}
+/*---------------------------------------------------------------------------------*/
+/* KnowCap Description in Footer CSS */
+.knowcap_desc p {
+  margin-top: 60px;
+  font-size: 20px;
+  font-family: "B612", sans-serif;
+  line-height: 40px;
+}
+
+/* KnowCap Description in Footer Responsive CSS (through the help of media screen) ----- */
+@media screen and (min-width: 751px) and (max-width: 1200px) {
+  .knowcap_desc p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  .knowcap_desc p {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 33px;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  .knowcap_desc p {
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .knowcap_desc p {
+    margin-top: 20px;
+    font-size: 9px;
+    line-height: 29px;
+  }
+}
+/*----------------------------------------------------------------------------------------*/
+/* Footer Image Decoration CSS */
+.footer_decor {
+  width: 40%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: bottom;
+  object-position: bottom;
+}
+
+/* Footer Image Decoration Responsive CSS (through the help of media screen) ----- */
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  .footer_decor {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .footer_decor {
+    width: 35%;
+  }
+}
+/*----------------------------------------------------------------------------------*//*# sourceMappingURL=FAQs.css.map */
