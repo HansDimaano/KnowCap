@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Use meta to modify the charset, name, and content -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Link main CSS to index page -->
+	<link rel="stylesheet" href="../CSS/SelectCapture.css">
+
+    <!-- Link Reveal Animation CSS to index page -->
+	<link rel="stylesheet" href="../CSS/RevealAnimation.css">
+
+    <!-- Link Web Page Icon of KnowCap-->
+    <link rel="icon" type="image/png" href="../Assets/KnowCapIcon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../Assets/KnowCapIcon-16x16.png" sizes="16x16" />
+
+	<!-- Title the page to Knowcap - Select Capture -->
+	<title>KnowCap - Select Capture</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- About Us Link -->
+        <a class="about_us" href="AboutUs.html">About Us</a>
+
+        <!-- KnowCap Logo -->
+        <a href="../index.html"><img src="../Assets/KnowCap_logo.png"></a>
+
+        <!-- FAQs Link -->
+        <a class="faqs">FAQs</a>
+    </header>
+
+    <!-- Top Right Decor for Web Page -->
+    <img src="../Assets/topright_decor.png" class="topright_decor">
+
+    <!-- Bottom Left Decor for Web Page -->
+    <img src="../Assets/bottomleft_decor.png" class="bottomleft_decor">
+
+    <!-- Select Capture DIV -->
+    <div class="select_capture">
+
+        <!-- Capture Video Button -->
+        <a href="VideoCapture.html">
+            <div class="cap_button vid">
+
+                <!-- Capture Video Heading -->
+                <h3>Capture<br>Video</h3>
+
+                <!-- Video Icon -->
+                <img src="../Assets/vid_icon.png">
+            </div>
+        </a>
+
+        <!-- Capture Audio Button -->
+        <a>
+            <div class="cap_button aud">
+
+                <!-- Capture Audio Heading -->
+                <h3>Capture<br>Audio</h3>
+
+                <!-- Audio Icon -->
+                <img src="../Assets/mic_icon.png">
+            </div>
+        </a>
+
+        <!-- Capture Screen Button -->
+        <a>
+            <div class="cap_button scr">
+
+                <!-- Capture Screen Heading -->
+                <h3>Capture<br>Screen</h3>
+
+                <!-- Screen Icon -->
+                <img src="../Assets/screen_icon.png">
+            </div>
+        </a>
+    </div>
+
+    <!-- Link the Reveal Animation JavaScript to index page -->
+    <script src="../JavaScript/RevealAnimation.js"></script>
+
+    <!--
+
+        TECHNICAL DESCRIPTION OF REVEAL ANIMATION:
+
+        - The reveal animation works through the Reveal Animation CSS and JavaScript.
+        - I highly recommend you to open those two files to know how it works.
+
+        - I assign which elements will have reveal animation by assigning "reveal ___" in its class names.
+        - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
+        - You can search "with Reveal Animation" to show which elements has Reveal Animation.
+
+    -->
+
+</body>
+</html>
