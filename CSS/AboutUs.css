@@ -152,7 +152,8 @@ header a.faqs:hover {
 
 /* About KnowCap DIV CSS */
 .about_knowcap {
-  background: url("../Assets/galaxy_bg1.png") no-repeat center center;
+  background: url("../Assets/footer_bg.png") no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -176,30 +177,6 @@ header a.faqs:hover {
 /* About KnowCap Image Decoration CSS */
 .about_knowcap img {
   max-width: 35%;
-  -webkit-animation: revealRight 1s ease;
-          animation: revealRight 1s ease; /* Assign the revealRight Animation to the Decoration */
-}
-
-/* Reveal Right Initial Animation (will only play once when the page is fully loaded) */
-@-webkit-keyframes revealRight {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes revealRight {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* About KnowCap Image Decoration Responsive CSS (through the help of media screen) */
