@@ -7,10 +7,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Link main CSS to index page -->
+	<!-- Link main CSS to About Us page -->
 	<link rel="stylesheet" href="../CSS/AboutUs.css">
 
-    <!-- Link Reveal Animation CSS to index page -->
+    <!-- Link Reveal Animation CSS to About Us page -->
 	<link rel="stylesheet" href="../CSS/RevealAnimation.css">
 
     <!-- Link Web Page Icon of KnowCap-->
@@ -47,14 +47,16 @@
 
             <!-- About KnowCap Description -->
             <p>
-                Users can display the contents of their computer screen on a video stream, website, or document, 
-                by using a clipping technique called screen capture. Screen capture is a fantastic tool if you want to 
-                take a picture or video of your computer desktop and store it as a file on your computer. 
+                KnowCap offers its users a promising experience when it comes to capturing media with their computers. 
+                Currently, KnowCap has 3 different modes for capturing. First is Video Capture, which allows users to capture 
+                video of themselves with the use of their device's camera. The second is Audio Capture, which allows users to do 
+                their voice recordings without any hassle. Lastly, Screen capture is best for capturing the best moments on your 
+                screen, whether it's gaming or recreational activities.
             </p>
         </div>
 
         <!-- About KnowCap Image Decoration -->
-        <img src="../Assets/right_decor3.png">
+        <img src="../Assets/right_decor3.png" id="revealRightOnce">
     </div>
 
     <!-- Our Story DIV -->
@@ -71,9 +73,10 @@
 
             <!-- Our Story Description -->
             <p>
-                Users can display the contents of their computer screen on a video stream, website, or document, 
-                by using a clipping technique called screen capture. Screen capture is a fantastic tool if you want to 
-                take a picture or video of your computer desktop and store it as a file on your computer. 
+                KnowCap is created by Hans Christian M. Dimaano.  He is a talented individual who is very passionate & committed 
+                to his projects. His main goal is to help students or developers like him be familiar with APIs, specifically Video, 
+                Audio, and Screen Capture APIs. KnowCap all started when he found frustration in finding a promising online capturing 
+                tool. That's why he started developing KnowCap, which took him approximately two weeks.
             </p>
         </div>
     </div>
@@ -106,21 +109,22 @@
             </div>
         </footer>
 
-     <!-- Link the Reveal Animation JavaScript to index page -->
-     <script src="../JavaScript/RevealAnimation.js"></script>
+    <!-- Link the Web Animations API JavaScript to About Us page -->
+    <script src="../JavaScript/WebAnimationsAPI.js"></script>
 
-     <!--
- 
-         TECHNICAL DESCRIPTION OF REVEAL ANIMATION:
- 
-         - The reveal animation works through the Reveal Animation CSS and JavaScript.
-         - I highly recommend you to open those two files to know how it works.
- 
-         - I assign which elements will have reveal animation by assigning "reveal ___" in its class names.
-         - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
-         - You can search "with Reveal Animation" to show which elements has Reveal Animation.
- 
-     -->
+    <!--
+
+        TECHNICAL DESCRIPTION OF WEB ANIMATION:
+
+        - Selected elements that has animation only at the start of the page are animated through the Web Animations API JavaScript.
+        - The elements are selected by setting their IDs such as revealLeftOnce or revealRightOnce.
+
+        - The scroll reveal animation works through the Reveal Animation CSS and Reveal Content Function in the same JavaScript.
+        - I highly recommend you to open those two files to know how it works.
+
+        - I assign which elements will have scroll reveal animation by assigning "reveal ___" in its class names.
+        - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
+    -->
  
  </body>
  </html>
