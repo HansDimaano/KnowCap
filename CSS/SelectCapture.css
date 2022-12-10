@@ -217,17 +217,13 @@ header a.faqs:hover {
 
 /* Capture Button Heading CSS */
 .cap_button h3 {
+  width: 50%;
   font-size: 28px;
-  margin-right: 60px;
 }
 
 /* Capture Button Icon CSS */
 .cap_button img {
   width: 50%;
-  -webkit-animation: entranceLeft 0.2s ease;
-          animation: entranceLeft 0.2s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 /* Capture Button Heading and Icon Responsive CSS (through the help of media screen) */
@@ -247,12 +243,6 @@ header a.faqs:hover {
 .cap_button:hover {
   margin: 50px 30px;
   justify-content: center;
-}
-
-/* Capture Button Icon Hover CSS */
-.cap_button:hover img {
-  -webkit-animation: entranceLeft 0.5s ease;
-          animation: entranceLeft 0.5s ease; /* Assign the entranceLeft Animation to the Decoration */
 }
 
 /* Capture Button Heading Hover CSS */
@@ -276,27 +266,4 @@ header a.faqs:hover {
 .cap_button.scr:hover {
   border: 8px dashed #c85d94;
   color: #c85d94;
-}
-
-/* Entrance Left Initial Animation (will only play once when the page is fully loaded) */
-@-webkit-keyframes entranceLeft {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes entranceLeft {
-  from {
-      transform: translateX(-20px);
-      opacity: 0;
-  }
-
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
 }
