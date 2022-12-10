@@ -7,11 +7,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Link main CSS to index page -->
+	<!-- Link main CSS to Select Capture page -->
 	<link rel="stylesheet" href="../CSS/SelectCapture.css">
-
-    <!-- Link Reveal Animation CSS to index page -->
-	<link rel="stylesheet" href="../CSS/RevealAnimation.css">
 
     <!-- Link Web Page Icon of KnowCap-->
     <link rel="icon" type="image/png" href="../Assets/KnowCapIcon-32x32.png" sizes="32x32" />
@@ -52,49 +49,50 @@
                 <h3>Capture<br>Video</h3>
 
                 <!-- Video Icon -->
-                <img src="../Assets/vid_icon.png">
+                <img src="../Assets/vid_icon.png" id="revealCaptureIcon">
             </div>
         </a>
 
         <!-- Capture Audio Button -->
-        <a>
+        <a href="AudioCapture.html">
             <div class="cap_button aud">
 
                 <!-- Capture Audio Heading -->
                 <h3>Capture<br>Audio</h3>
 
                 <!-- Audio Icon -->
-                <img src="../Assets/mic_icon.png">
+                <img src="../Assets/mic_icon.png" id="revealCaptureIcon">
             </div>
         </a>
 
         <!-- Capture Screen Button -->
-        <a>
+        <a href="ScreenCapture.html">
             <div class="cap_button scr">
 
                 <!-- Capture Screen Heading -->
                 <h3>Capture<br>Screen</h3>
 
                 <!-- Screen Icon -->
-                <img src="../Assets/screen_icon.png">
+                <img src="../Assets/screen_icon.png" id="revealCaptureIcon">
             </div>
         </a>
     </div>
 
-    <!-- Link the Reveal Animation JavaScript to index page -->
-    <script src="../JavaScript/RevealAnimation.js"></script>
+    <!-- Link the Web Animations API JavaScript to Select Capture page -->
+    <script src="../JavaScript/WebAnimationsAPI.js"></script>
 
     <!--
 
-        TECHNICAL DESCRIPTION OF REVEAL ANIMATION:
+        TECHNICAL DESCRIPTION OF WEB ANIMATION:
 
-        - The reveal animation works through the Reveal Animation CSS and JavaScript.
+        - Selected elements that has animation only at the start of the page are animated through the Web Animations API JavaScript.
+        - The elements are selected by setting their IDs such as revealLeftOnce or revealRightOnce.
+
+        - The scroll reveal animation works through the Reveal Animation CSS and Reveal Content Function in the same JavaScript.
         - I highly recommend you to open those two files to know how it works.
 
-        - I assign which elements will have reveal animation by assigning "reveal ___" in its class names.
+        - I assign which elements will have scroll reveal animation by assigning "reveal ___" in its class names.
         - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
-        - You can search "with Reveal Animation" to show which elements has Reveal Animation.
-
     -->
 
 </body>
