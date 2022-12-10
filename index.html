@@ -41,7 +41,7 @@
     <div class="capture_moments">
 
         <!-- Left Image Decoration -->
-        <img src="Assets/left_decor1.png" class="left">
+        <img src="Assets/left_decor1.png" class="left" id="revealLeftOnce">
 
         <!-- Capture Text DIV -->
         <div class="capture_text">
@@ -54,7 +54,7 @@
         </div>
 
         <!-- Right Image Decoration -->
-        <img src="Assets/right_decor1.png" class="right">
+        <img src="Assets/right_decor1.png" class="right" id="revealRightOnce">
     </div>
 
 
@@ -173,20 +173,21 @@
     </footer>
 
 
-    <!-- Link the Reveal Animation JavaScript to index page -->
-    <script src="JavaScript/RevealAnimation.js"></script>
+    <!-- Link the Web Animations API JavaScript to index page -->
+    <script src="JavaScript/WebAnimationsAPI.js"></script>
 
     <!--
 
-        TECHNICAL DESCRIPTION OF REVEAL ANIMATION:
+        TECHNICAL DESCRIPTION OF WEB ANIMATION:
 
-        - The reveal animation works through the Reveal Animation CSS and JavaScript.
+        - Selected elements that has animation only at the start of the page are animated through the Web Animations API JavaScript.
+        - The elements are selected by setting their IDs such as revealLeftOnce or revealRightOnce.
+
+        - The scroll reveal animation works through the Reveal Animation CSS and Reveal Content Function in the same JavaScript.
         - I highly recommend you to open those two files to know how it works.
 
-        - I assign which elements will have reveal animation by assigning "reveal ___" in its class names.
+        - I assign which elements will have scroll reveal animation by assigning "reveal ___" in its class names.
         - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
-        - You can search "with Reveal Animation" to show which elements has Reveal Animation.
-
     -->
 
 </body>
