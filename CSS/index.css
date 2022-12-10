@@ -142,6 +142,7 @@ header a.faqs:hover {
 /* Capture Moments DIV CSS */
 .capture_moments {
   background: url("../Assets/galaxy_bg1.png") no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -172,66 +173,6 @@ header a.faqs:hover {
 .capture_moments img {
   max-width: 350px;
   min-width: 50px;
-}
-
-/* Capture Moments Left Image Decoration CSS */
-.capture_moments img.left {
-  -webkit-animation: revealLeft 1s ease;
-          animation: revealLeft 1s ease; /* Assign the revealLeft Animation to the Decoration */
-}
-
-/* Reveal Left Initial Animation (will only play once when the page is fully loaded) */
-@-webkit-keyframes revealLeft {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes revealLeft {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Capture Moments Right Image Decoration CSS */
-.capture_moments img.right {
-  -webkit-animation: revealRight 1s ease;
-          animation: revealRight 1s ease; /* Assign the revealRight Animation to the Decoration */
-}
-
-/* Reveal Right Initial Animation (will only play once when the page is fully loaded) */
-@-webkit-keyframes revealRight {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes revealRight {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* Capture Moments Image Decorations Responsive CSS (through the help of media screen) ----- */
