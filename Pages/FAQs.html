@@ -7,10 +7,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Link main CSS to index page -->
+	<!-- Link main CSS to FAQs page -->
 	<link rel="stylesheet" href="../CSS/FAQs.css">
 
-    <!-- Link Reveal Animation CSS to index page -->
+    <!-- Link Reveal Animation CSS to FAQs page -->
 	<link rel="stylesheet" href="../CSS/RevealAnimation.css">
 
     <!-- Link Web Page Icon of KnowCap-->
@@ -39,7 +39,7 @@
     <div class="faqs_heading">
 
         <!-- FAQs Heading Image Decoration -->
-        <img src="../Assets/left_decor3.png">
+        <img src="../Assets/left_decor3.png" id="revealLeftOnce">
 
         <!-- Information Text DIV -->
         <div class="info_text">
@@ -64,57 +64,57 @@
             <h3><b>Q:</b> Is KnowCap free to use?</h3>
 
             <!-- Answer 1 -->
-            <p>Yes</p>
+            <p>Yes, all of it is free!</p>
         </div>
 
         <!-- Question 2 DIV -->
         <div class="question reveal up">
 
             <!-- Question 2 -->
-            <h3><b>Q:</b> Is KnowCap free to use?</h3>
+            <h3><b>Q:</b> Can KnowCap capture video?</h3>
 
             <!-- Answer 2 -->
-            <p>Yes</p>
+            <p>Yes, and audio as well!</p>
         </div>
 
         <!-- Question 3 DIV -->
         <div class="question reveal up">
 
             <!-- Question 3 -->
-            <h3><b>Q:</b> Is KnowCap free to use?</h3>
+            <h3><b>Q:</b> What is the limit on captures?</h3>
 
             <!-- Answer 3 -->
-            <p>Yes</p>
+            <p>As many as you can!</p>
         </div>
 
         <!-- Question 4 DIV -->
         <div class="question reveal up">
 
             <!-- Question 4 -->
-            <h3><b>Q:</b> Is KnowCap free to use?</h3>
+            <h3><b>Q:</b> Can you choose file format?</h3>
 
             <!-- Answer 4 -->
-            <p>Yes</p>
+            <p>Yes, both on video and audio</p>
         </div>
 
         <!-- Question 5 DIV -->
         <div class="question reveal up">
 
             <!-- Question 5 -->
-            <h3><b>Q:</b> Is KnowCap free to use?</h3>
+            <h3><b>Q:</b> Is there a time limit on video?</h3>
 
             <!-- Answer 5 -->
-            <p>Yes</p>
+            <p>No, but the processing could take longer</p>
         </div>
 
         <!-- Question 6 DIV -->
         <div class="question reveal up">
 
             <!-- Question 6 -->
-            <h3><b>Q:</b> Is KnowCap free to use?</h3>
+            <h3><b>Q:</b> Is audio recorded in screen capture?</h3>
 
             <!-- Answer 6 -->
-            <p>Yes</p>
+            <p>Yes, and microphone permission is asked</p>
         </div>
     </div>
 
@@ -146,20 +146,21 @@
         </div>
     </footer>
 
-    <!-- Link the Reveal Animation JavaScript to index page -->
-    <script src="../JavaScript/RevealAnimation.js"></script>
+    <!-- Link the Web Animations API JavaScript to FAQs page -->
+    <script src="../JavaScript/WebAnimationsAPI.js"></script>
 
     <!--
 
-        TECHNICAL DESCRIPTION OF REVEAL ANIMATION:
+        TECHNICAL DESCRIPTION OF WEB ANIMATION:
 
-        - The reveal animation works through the Reveal Animation CSS and JavaScript.
+        - Selected elements that has animation only at the start of the page are animated through the Web Animations API JavaScript.
+        - The elements are selected by setting their IDs such as revealLeftOnce or revealRightOnce.
+
+        - The scroll reveal animation works through the Reveal Animation CSS and Reveal Content Function in the same JavaScript.
         - I highly recommend you to open those two files to know how it works.
 
-        - I assign which elements will have reveal animation by assigning "reveal ___" in its class names.
+        - I assign which elements will have scroll reveal animation by assigning "reveal ___" in its class names.
         - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
-        - You can search "with Reveal Animation" to show which elements has Reveal Animation.
-
     -->
 
 </body>
