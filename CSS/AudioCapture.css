@@ -1,0 +1,571 @@
+/*
+  SUMMARY OF TECHNIQUES DONE:
+
+  - Used @import to import fonts appropriate for the design
+  - Used display: flex for most of the divs
+  - Used transiion and hover for element animations when hovering
+  - Used @mediascreen for handling the web page responsiveness
+
+*/
+
+/* Import Raleway Font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Import B612 Font */
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Body CSS */
+body {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif; /* Raleway Font */
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+/* Header CSS */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0;
+  background: url(../Assets/galaxy_bg1.png) no-repeat center center;
+}
+
+/* KnowCap Logo CSS */
+header img {
+  max-width: 300px;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in-out;
+  padding: 20px 0 10px 0;
+}
+
+/* KnowCap Logo Hover CSS */
+header img:hover {
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed #C344FF;
+}
+
+/* KnowCap Logo Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  header img {
+    max-width: 250px;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 900px) {
+  header img {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 750px) {
+  header img {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  header img {
+    max-width: 120px;
+  }
+}
+/*---------------------------------------------------------------*/
+
+
+
+/* Links (hover, focus, and active links) CSS */
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* About Us and FAQs Links CSS */
+header a.about_us, header a.faqs {
+  min-width: 100px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-top: 2px dashed;
+  transition: 0.2s linear;
+  cursor: pointer;
+  border-bottom: 2px dashed transparent;
+}
+
+/* About Us and FAQs Links Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  header a.about_us, header a.faqs {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 900px) {
+  header a.about_us, header a.faqs {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  header a.about_us, header a.faqs {
+    font-size: 12px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 550px) {
+  header a.about_us, header a.faqs {
+    font-size: 11px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  header a.about_us, header a.faqs {
+    font-size: 9px;
+    padding: 5px;
+    min-width: 50px;
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+/* About Us Link CSS */
+header a.about_us {
+  border-top-color: #56CCFF;
+}
+
+/* About Us Link Hover CSS */
+header a.about_us:hover {
+  border-bottom: 2px dashed #56CCFF;
+  color: #56CCFF;
+  font-weight: bolder;
+}
+
+/* FAQs Link CSS */
+header a.faqs {
+  border-top-color: #C344FF;
+}
+
+/* FAQs Link Hover CSS */
+header a.faqs:hover {
+  border-bottom: 2px dashed #C344FF;
+  color: #C344FF;
+  font-weight: bolder;
+}
+
+/* Recorder DIV CSS */
+.recorder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+/* Recorder DIV Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .recorder {
+    flex-direction: column;
+  }
+}
+/*-----------------------------------------------------------------*/
+
+
+
+/* Microphone Container CSS */
+.microphone_container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Microphone BG DIV CSS */
+.mic_bg {
+  background: url(../Assets/mic_bg.png) no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 20px;
+}
+
+/* Microphone BG DIV Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+  .mic_bg {
+    width: 80%;
+    padding: 50px 20px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 850px) {
+  .mic_bg {
+    width: 70%;
+    padding: 50px 20px;
+  }
+}
+/*---------------------------------------------------------------------*/
+
+
+
+/* Microphone Recording Animation */
+@-webkit-keyframes recordingAnim {
+
+  /* 10 degree rotation of Microphone */
+  from, to {
+    transform: rotate(10deg);
+  }
+
+  /* -10 degree rotation of Microphone */
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes recordingAnim {
+
+  /* 10 degree rotation of Microphone */
+  from, to {
+    transform: rotate(10deg);
+  }
+
+  /* -10 degree rotation of Microphone */
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* isRecording Class of Button (this class is added when recording has started; done through JavaScript) */
+button.isRecording {
+
+  /* Set Box Shadow of Button */
+  box-shadow: 0 0 0 4px rgb(0, 107, 115), 0 0 0 10px rgba(69, 161, 255, 0.3);
+}
+
+/* isRecording Class of Button Image (this class is added when recording has started; done through JavaScript) */
+button.isRecording img {
+
+  /* Set Infinite Animation of Button Image to Recording Animation */
+  -webkit-animation: recordingAnim 0.7s ease infinite;
+          animation: recordingAnim 0.7s ease infinite;
+}
+
+/* Buttons CSS (both start record and stop record button) */
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+/* Microphone Image */
+button img {
+  width: 400px;
+}
+
+/* Microphone Image Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  button img {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 700px) {
+  button img {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  button img {
+    width: 150px;
+  }
+}
+/*---------------------------------------------------------------------*/
+
+
+
+/* Instructions Text */
+#instruction {
+  display: flex;
+  align-items: center;
+}
+
+/* Instructions Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #instruction {
+    flex-direction: column;
+  }
+}
+/*---------------------------------------------------------------------*/
+
+
+
+/* Instructions Bold Text */
+#instruction b {
+  color: lightgreen;
+  text-transform: uppercase;
+  margin: 0 7px;
+}
+
+/* Instructions Bold Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  #instruction b {
+    margin: 10px 7px 8px 7px;
+  }
+}
+/*---------------------------------------------------------------------------*/
+
+
+
+/* Sidebar DIV CSS */
+.sidebar {
+  width: 20%;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar DIV Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .sidebar {
+    width: 80%;
+    margin-top: 40px;
+    padding-right: 0;
+  }
+}
+/*---------------------------------------------------------------*/
+
+
+
+/* Record Status Text CSS */
+#record_status {
+  width: 100%;
+  color: rgb(255, 0, 0);
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 10px dashed white;
+  font-family: "B612", sans-serif;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+/* Record Status Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  #record_status {
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 5px dashed white;
+  }
+}
+/*----------------------------------------------------------------------*/
+
+
+
+/* Bold Text CSS */
+b {
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+/* Bold Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  b {
+    font-size: 20px;
+  }
+}
+/*--------------------------------------------------------------*/
+
+
+
+/* Settings DIV CSS */
+.settings {
+  width: 100%;
+  text-align: left;
+  margin-top: 40px;
+}
+
+/* Settings DIV Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .settings {
+    text-align: center;
+  }
+}
+/*----------------------------------------------------------------*/
+
+
+
+/* Settings Bold Text CSS */
+.settings b {
+  font-size: 30px;
+}
+
+/* Settings Bold Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .settings b {
+    font-size: 20px;
+  }
+}
+/*----------------------------------------------------------------------*/
+
+
+
+/* Input Text CSS */
+input[type=text] {
+  background-color: black;
+  color: white;
+  width: 80%;
+  height: 16px;
+  font-size: 20px;
+  font-family: "B612", sans-serif;
+  border-bottom: 2px solid white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  outline: none;
+  transition: 0.2s all linear;
+}
+
+/* Input Text Text Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  input[type=text] {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+/*--------------------------------------------------------------------*/
+
+
+
+/* Radio Button CSS */
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(0, 107, 115, 0.266);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  transition: 0.2s all linear;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+/* Checked Radio Button Input CSS */
+input:checked {
+  border: 4px solid white;
+  background-color: rgb(0, 148, 189);
+}
+
+/* Radio Button Label CSS */
+label {
+  font-family: "B612", sans-serif;
+  font-size: 22px;
+}
+
+/* Radio Button Label Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  label {
+    font-size: 16px;
+  }
+}
+/*-----------------------------------------------------------------------*/
+
+
+
+/* Recorded Audios BG CSS */
+.recorded_aud_bg {
+  background: url("../Assets/circle_bg.png");
+  min-height: 200px;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Recorded Audios DIV CSS */
+#recorded_audios {
+  width: 80%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: black;
+  border: 5px dotted white;
+  border-radius: 30px;
+  padding: 50px 0;
+}
+
+/* Audios Recorded Heading CSS */
+#auds_recorded {
+  width: 80%;
+}
+
+/* Recorded Audios CSS */
+#recorded_audios audio {
+  width: 60%;
+  margin-bottom: 30px;
+  box-shadow: 10px 10px 25px -8px rgba(109, 236, 245, 0.75);
+  -webkit-box-shadow: 10px 10px 25px -8px rgba(109, 236, 245, 0.75);
+  -moz-box-shadow: 10px 10px 25px -8px rgba(109, 236, 245, 0.75);
+  border-radius: 50px;
+  transition: 0.3s linear;
+}
+
+/* Recorded Audios Hover, Focus, and Active CSS */
+#recorded_audios audio:hover, audio:focus, audio:active {
+  transform: scale(1.1);
+}
+
+/* Recorded Audios Title CSS */
+#recorded_audios h3 {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+/* Recorded Audios Title Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  #recorded_audios h3 {
+    font-size: 20px;
+  }
+}
+/*------------------------------------------------------------------------*/
+
+
+
+/* Download Audio Link CSS */
+#recorded_audios a {
+  background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.2s linear;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Download Audio Link Responsive CSS (through the help of media screen) */
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  #recorded_audios a {
+    font-size: 15px;
+  }
+}
+/*------------------------------------------------------------------------*/
+
+
+
+/* Download Audio Link Hover CSS */
+#recorded_audios a:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
