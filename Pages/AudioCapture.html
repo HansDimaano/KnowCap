@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Use meta to modify the charset, name, and content -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Link main CSS to Audio Capture page -->
+	<link rel="stylesheet" href="../CSS/AudioCapture.css">
+
+    <!-- Link Reveal Animation CSS to Audio Capture page -->
+	<link rel="stylesheet" href="../CSS/RevealAnimation.css">
+
+    <!-- Link Web Page Icon of KnowCap-->
+    <link rel="icon" type="image/png" href="../Assets/KnowCapIcon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../Assets/KnowCapIcon-16x16.png" sizes="16x16" />
+
+	<!-- Title the page to Knowcap - Audio Capture -->
+	<title>KnowCap - Audio Capture</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- About Us Link -->
+        <a class="about_us" href="AboutUs.html">About Us</a>
+
+        <!-- KnowCap Logo -->
+        <a href="../index.html"><img src="../Assets/KnowCap_logo.png"></a>
+
+        <!-- FAQs Link -->
+        <a class="faqs" href="FAQs.html">FAQs</a>
+    </header>
+
+    <!-- Whole Recorder DIV -->
+    <div class="recorder">
+
+        <!-- Microphone Container -->
+        <div class="microphone_container" id="revealUpOnce">
+             
+            <!-- Microphone Background -->
+            <div class="mic_bg">
+
+                <!-- Start Recording Button-->
+                <button type="button" id="mic_button">
+
+                    <!-- Microphone Image -->
+                    <img src="../Assets/mic.png">
+                </button>
+            </div>
+
+            <!-- Instruction (will be changed through JavaScript) -->
+            <h3 id="instruction">Click the Microphone to <b>Start</b> Recording</h3>
+        </div>
+
+
+        <!-- Sidebar DIV -->
+        <div class="sidebar" id="revealRightOnce">
+
+            <!-- Record Status DIV -->
+            <div id="record_status">
+
+                <!-- Not Recording Status -->
+                <b>Status:</b><br>Not Recording
+            </div>
+
+            <!-- Audio File Name Input DIV -->
+            <div class="settings">
+                <b>Audio File Name:  </b>
+                
+                <!-- Audio File Name Text Input -->
+                <input type="text" id="file_name" value="My Audio Recording">
+            </div>
+
+            <!-- Audio File Format Radio Buttons DIV -->
+            <div class="settings">
+                <b>Audio File Format:</b><br>
+
+                <!-- MP3 (mpeg) Radio Button -->
+                <input type="radio" name="audio_file_format" value="mpeg" id="mpeg" checked>
+                <label for="mpeg">.mpeg</label><br>
+
+                <!-- WAV Radio Button -->
+                <input type="radio" name="audio_file_format" value="wav" id="wav">
+                <label for="wav">.wav</label><br>
+
+                <!-- OGG Radio Button -->
+                <input type="radio" name="audio_file_format" value="ogg" id="ogg">
+                <label for="ogg">.ogg</label><br>
+            </div>
+        </div>        
+    </div>
+
+    <!-- Recorded Audio Background DIV -->
+    <div class="recorded_aud_bg">
+        
+        <!-- Recorded Audios DIV -->
+        <div id="recorded_audios" class="reveal up">
+
+            <!-- Audios Recorded Subheading (hidden at first; will be visible when a recording has been done; will be visible through JavaScript) -->
+	        <h2 id="auds_recorded">Audios Recorded:</h2>
+
+            <!-- The recorded audios and its download link will be appended at the bottom of the page wrapper through JavaScript -->
+            <!-- The code added looks like the code below: -->
+            
+            <!-- 
+			<audio id="recorded-audio" controls></audio>
+
+			<a href="" > Download Audio </a>
+            -->
+        </div>
+    </div>
+
+    <!-- Link the Audio Capture API JavaScript to Audio Capture page -->
+    <script src="../JavaScript/AudioCaptureAPI.js"></script>
+
+    <!-- Link the Fullscreen API JavaScript to Audio Capture page -->
+    <script src="../JavaScript/FullscreenAPI.js"></script>
+
+    <!-- Link the Web Animations API JavaScript to Audio Capture page -->
+    <script src="../JavaScript/WebAnimationsAPI.js"></script>
+
+    <!--
+
+        TECHNICAL DESCRIPTION OF WEB ANIMATION:
+
+        - Selected elements that has animation only at the start of the page are animated through the Web Animations API JavaScript.
+        - The elements are selected by setting their IDs such as revealLeftOnce or revealRightOnce.
+
+        - The scroll reveal animation works through the Reveal Animation CSS and Reveal Content Function in the same JavaScript.
+        - I highly recommend you to open those two files to know how it works.
+
+        - I assign which elements will have scroll reveal animation by assigning "reveal ___" in its class names.
+        - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
+    -->
+
+</body>
+</html>

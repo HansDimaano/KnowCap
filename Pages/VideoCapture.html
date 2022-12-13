@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Use meta to modify the charset, name, and content -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Link main CSS to Video Capture page -->
+	<link rel="stylesheet" href="../CSS/VideoCapture.css">
+
+    <!-- Link Reveal Animation CSS to Video Capture page -->
+	<link rel="stylesheet" href="../CSS/RevealAnimation.css">
+
+    <!-- Link Web Page Icon of KnowCap-->
+    <link rel="icon" type="image/png" href="../Assets/KnowCapIcon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../Assets/KnowCapIcon-16x16.png" sizes="16x16" />
+
+	<!-- Title the page to Knowcap - Video Capture -->
+	<title>KnowCap - Video Capture</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- About Us Link -->
+        <a class="about_us" href="AboutUs.html">About Us</a>
+
+        <!-- KnowCap Logo -->
+        <a href="../index.html"><img src="../Assets/KnowCap_logo.png"></a>
+
+        <!-- FAQs Link -->
+        <a class="faqs" href="FAQs.html">FAQs</a>
+    </header>
+
+    <!-- Whole Recorder DIV -->
+    <div class="recorder">
+
+        <!-- Video Container for Background -->
+        <div class="vid_container" id="revealUpOnce">
+
+            <!-- Preview Video Container -->
+            <div class="preview_container">
+
+                <!-- Preview Video (muted to avoid echo) -->
+                <video autoplay id="preview_video" muted>
+                    Video Tag Not Supported! <!-- Error Message if the browser doesn't support the video tag -->
+                </video>
+            </div>
+
+            <!-- Buttons Container -->
+            <div class="buttons_container">
+
+                <!-- Start Recording Button-->
+                <button type="button" id="start_rec_btn"
+                    onclick="startRecord(this, document.getElementById('stop_rec_btn'), document.getElementById('fullscreen_btn'))">
+    
+                    Start Recording
+                </button>
+    
+                <!-- Stop Recording Button (disabled at first) -->
+                <button type="button" id="stop_rec_btn" disabled
+                    onclick="stopRecord(this, document.getElementById('start_rec_btn'), document.getElementById('fullscreen_btn'))">
+                    
+                    Stop Recording
+                </button>
+
+                <!-- Toggle Fullscreen Button (disabled at first) -->
+                <button type="button" id="fullscreen_btn" disabled
+                    onclick="toggleFullscreen(document.getElementById('preview_video'))">
+                    
+                    Toggle Fullscreen
+                </button>
+            </div>
+        </div>
+
+        <!-- Sidebar DIV -->
+        <div class="sidebar" id="revealRightOnce">
+
+            <!-- Record Status DIV -->
+            <div id="record_status">
+
+                <!-- Not Recording Status -->
+                <b>Status:</b><br>Not Recording
+            </div>
+
+            <!-- Video File Name Input DIV -->
+            <div class="settings">
+                <b>Video File Name:  </b>
+                
+                <!-- Video File Name Text Input -->
+                <input type="text" id="file_name" value="My Video Recording">
+            </div>
+
+            <!-- Video File Format Radio Buttons DIV -->
+            <div class="settings">
+                <b>Video File Format:</b><br>
+
+                <!-- MP4 Radio Button -->
+                <input type="radio" name="video_file_format" value="mp4" id="mp4" checked>
+                <label for="mp4">.mp4</label><br>
+
+                <!-- WEBM Radio Button -->
+                <input type="radio" name="video_file_format" value="webm" id="webm">
+                <label for="webm">.webm</label><br>
+
+                <!-- OGG Radio Button -->
+                <input type="radio" name="video_file_format" value="ogg" id="ogg">
+                <label for="ogg">.ogg</label><br>
+            </div>
+        </div>        
+    </div>
+
+    <!-- Recorded Video Background DIV -->
+    <div class="recorded_vid_bg">
+        
+        <!-- Recorded Videos DIV -->
+        <div id="recorded_videos" class="reveal up">
+
+            <!-- Videos Recorded Subheading (hidden at first; will be visible when a recording has been done; will be visible through JavaScript) -->
+	        <h2 id="vids_recorded">Videos Recorded:</h2>
+
+            <!-- The recorded videos and its download link will be appended at the bottom of the page wrapper through JavaScript -->
+            <!-- The code added looks like the code below: -->
+            
+            <!-- 
+                <video id="recorded-video" controls>
+                    Video Tag Not Supported!
+                </video> 
+
+                <a href="" > Download Video </a>
+            -->
+        </div>
+    </div>
+
+    <!-- Link the Video Capture API JavaScript to Video Capture page -->
+    <script src="../JavaScript/VideoCaptureAPI.js"></script>
+
+    <!-- Link the Fullscreen API JavaScript to Video Capture page -->
+    <script src="../JavaScript/FullscreenAPI.js"></script>
+
+    <!-- Link the Web Animations API JavaScript to Video Capture page -->
+    <script src="../JavaScript/WebAnimationsAPI.js"></script>
+
+    <!--
+
+        TECHNICAL DESCRIPTION OF REVEAL ANIMATION:
+
+        - The reveal animation works through the Reveal Animation CSS and JavaScript.
+        - I highly recommend you to open those two files to know how it works.
+
+        - I assign which elements will have reveal animation by assigning "reveal ___" in its class names.
+        - The blank in "reveal ___" is for the direction of the animation. It could be either up, right, left, or down.
+        - You can search "with Reveal Animation" to show which elements has Reveal Animation.
+
+    -->
+
+</body>
+</html>
