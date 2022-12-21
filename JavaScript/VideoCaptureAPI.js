@@ -88,14 +88,14 @@ function startRecord(startRecBtn, stopRecBtn, fullScreenBtn) {
 				// Create a Video Name element using createElement method
 				const videoName = document.createElement("h3");
 
-				// Set the Video Name to the value of file name input
-				videoName.innerHTML = document.getElementById("file_name").value;
-
 				// Create a download link element using createElement method
 				const downloadLink = document.createElement("a");
 
 				// Check if the file name input text has an input
 				if (document.getElementById("file_name").value.length > 0){
+
+					// Set the Video Name to the value of file name input
+					videoName.innerHTML = document.getElementById("file_name").value;
 					
 					// Set the file name of the downloadable to the value of file name input
 					downloadLink.download = document.getElementById("file_name").value;
@@ -103,6 +103,9 @@ function startRecord(startRecBtn, stopRecBtn, fullScreenBtn) {
 
 				// The file name input text must be empty
 				else {
+
+					// Set the Video Name to "Untitled"
+					videoName.innerHTML = "Untitled";
 
 					// Set the file name of the downloadable to "Untitled"
 					downloadLink.download = "Untitled";
