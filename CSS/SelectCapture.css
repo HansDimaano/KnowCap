@@ -171,7 +171,7 @@ header a.faqs:hover {
 
 /* Select Capture DIV CSS */
 .select_capture {
-  background: url("../Assets/galaxy_bg2.png") no-repeat center center;
+  background: url("../Assets/galaxy_bg1.png") no-repeat center center;
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
